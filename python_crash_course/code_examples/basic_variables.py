@@ -27,13 +27,13 @@ print(stripleft)
 # floats #
 
 # divinding any two number whether they are integers or not will return a float
-divide = 4/2
-print(divide) # prints 2.0
+divide = 4 / 2
+print(divide)  # prints 2.0
 # arithmetic using mixture of number types results in a float
-plus = 1 + 2.0 # 3.0
-multiply = 2 * 3.0 # 6.0
-squared = 3.0 ** 2 # 9.0
+plus = 1 + 2.0  # 3.0
+multiply = 2 * 3.0  # 6.0
+squared = 3.0**2  # 9.0
 
 # multiple assignments #
-x,y,z = 0,0,0 # assigns all vars with values
-MAX_CONNECTIONS = 5000 # constant capitalised and shouldn't be changed
+x, y, z = 0, 0, 0  # assigns all vars with values
+MAX_CONNECTIONS = 5000  # constant capitalised and shouldn't be changed
