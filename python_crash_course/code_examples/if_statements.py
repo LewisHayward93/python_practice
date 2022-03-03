@@ -27,4 +27,4 @@ for number in numbers:
     if number >= 2 and number < 10:
         print(number)
 
-# check if not in list #
+# check if item not in list #
