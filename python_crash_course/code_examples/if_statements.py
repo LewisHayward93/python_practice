@@ -28,3 +28,24 @@ for number in numbers:
         print(number)
 
 # check if item not in list #
+banned_users = ["tom", "claire", "harry"]
+user = "lewis"
+if user not in banned_users:  # can also check to see if in by ommitting 'not'
+    print(f"{user.title()} is allowed access!")
+
+# elif statements #
+age = 25
+if age < 18:
+    print("User 0-18 years old.")
+elif age >= 18 and age <= 40:
+    print("User 18-40 years old.")
+else:
+    print("User over 40 years old.")
+
+# if statements with lists #
+toppings = ["mushroom", "peppers", "onions"]
+for topping in toppings:
+    if topping == 'mushroom':
+        print(f"No {topping} available")
+    else:
+        print(f"Adding {topping}")
