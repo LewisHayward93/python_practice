@@ -1,7 +1,7 @@
 # lists #
 
 # square brackets and separated by commas
-names = ["lewis", "emma", "willow"]
+names = ["john", "tim", "buster"]
 
 print(names)  # prints including the square brackets
 print(names[0])  # access individual elements
@@ -23,7 +23,8 @@ motorcycles.append("triumph")  # appends to the end by default
 print(motorcycles)
 
 # insert into list #
-motorcycles.insert(0, "bmw")  # inserts at specified index and shifts everything else
+# inserts at specified index and shifts everything else
+motorcycles.insert(0, "bmw")
 print(motorcycles)
 
 # remove from list #

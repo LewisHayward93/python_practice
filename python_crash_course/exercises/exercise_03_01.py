@@ -1,4 +1,4 @@
-names = ["lewis", "emma", "willow"]
-print(names[0])  # prints lewis
-print(names[1])  # prints emma
-print(names[-1])  # prints willow using -1 as index
+names = ["john", "tim", "buster"]
+print(names[0])  # prints john
+print(names[1])  # prints tim
+print(names[-1])  # prints buster using -1 as index

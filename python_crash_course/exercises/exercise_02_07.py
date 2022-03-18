@@ -1,4 +1,4 @@
-message = "  Lewis\nHayward   "
+message = "  john\nsmith   "
 print(message)
 print(message.lstrip())
 print(message.rstrip())

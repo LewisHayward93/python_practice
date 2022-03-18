@@ -1,22 +1,22 @@
 # if statements #
 
-names = ["lewis", "emma", "willow"]
+names = ["john", "tim", "buster"]
 for name in names:
-    if name == "lewis":  # equality test is case sensitive
+    if name == "john":  # equality test is case sensitive
         print(name.upper())
     else:
         print(name.title())
 
 # not equal to #
 for name in names:
-    if name != "emma":
+    if name != "tim":
         print(name.title())
     else:
         print(name.upper())
 
 # or #
 for name in names:
-    if name == "willow" or name == "emma":
+    if name == "buster" or name == "tim":
         print(name.upper())
     else:
         print(name.title())
@@ -29,7 +29,7 @@ for number in numbers:
 
 # check if item not in list #
 banned_users = ["tom", "claire", "harry"]
-user = "lewis"
+user = "john"
 if user not in banned_users:  # can also check to see if in by ommitting 'not'
     print(f"{user.title()} is allowed access!")
 

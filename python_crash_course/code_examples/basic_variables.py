@@ -1,6 +1,6 @@
 # simple string manipulation #
 
-name = "lewis hayward"
+name = "john smith"
 # title() method to capitalise words
 print(name.title())
 # upper() capitalise all words
@@ -10,15 +10,15 @@ print(name.lower())
 
 # f-strings present in python 3.6 or higher #
 
-first = "lewis"
-second = "hayward"
+first = "john"
+second = "smith"
 # f-string formates the string by replacing the var name with its value
 fullname = f"{first} {second}"
 # can add methods to manipulate f-string
 print(f"Hello, {fullname.title()}")
 
 # stripping whitespace #
-message = "   lewis    "
+message = "   john    "
 stripright = message.rstrip()
 stripleft = message.lstrip()
 print(stripright)
