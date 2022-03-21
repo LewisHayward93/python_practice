@@ -126,3 +126,58 @@ print(repr(e)) # use repr() when debugging to get exact match of value and type
 : hello
 : world
 : 'hello\nworld'
+
+** Lists
+
+*** Accessing lists within lists
+
+- multiple index positions allow the user to access an element in a sublist
+
+#+begin_src python :results output
+a = [1,'Dave',3.14,['James',23,2.1,[100,101]],10]
+print(a[3][3][1])
+#+end_src
+
+#+RESULTS:
+: 101
+
+** Tuples
+
+- tuples are enclosed in '()' and are immutable
+- values in tuple can be extracted but more common to unpack tuples into set of variables
+
+#+begin_src python :results output
+holding = ('GOOG',100,490.10)
+address = ('www.python.org',80)
+a = () # empty tuple
+b = ('item',) # must have trailing comma for just one item
+name, share, price = holding # unpack tuple items into variables
+host, port = address
+print(host)
+#+end_src
+
+#+RESULTS:
+: www.python.org
+
+** Sets
+
+- unordered collection of unique objects
+
+#+begin_src python :results output
+companies1 = {'IBM','MSFT','AA'} # method one of making a set using {}
+companies2 = set(['IBM','HPE','CAT','GOOG','IBM']) # method two using set() on collection
+print(companies2) # only prints unique
+
+a = companies1 | companies2 # union
+b = companies1 & companies2 # intersection
+c = companies1 - companies2 # difference
+d = companies2 - companies1 # difference
+e = companies1 ^ companies2 # symmetric difference
+print(f"Union: {a}")
+print(f"Intersection: {b}")
+print(f"Difference 1 from 2: {c}")
+print(f"Difference 2 from 1: {d}")
+print(f"Symmetric Difference: {e}" )
+#+end_src
+
+#+RESULTS:
