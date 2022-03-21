@@ -199,6 +199,9 @@ print(f"Symmetric Difference: {e}" )
 
 #+begin_src python :results output
 def divide(a: int, b: int) -> int:
+    '''
+    Good practice to explain what the function does between triple quotes for python docs
+    '''
     q = a // b
     r = a - q * b
     return (q,r)
@@ -212,3 +215,45 @@ print(f"Quotient: {quotient}\nRemainder: {remainder}")
 : Remainder: 4
 
 ** Exceptions
+
+See example [[file:chapter01/exception_ex.py][here]].
+
+*** Program termination
+
+#+begin_src python
+raise SystemExit() # Exit the program with no error message
+raise SystemExit("Something is wrong") # Exit with an error message
+atexit.register(function_name) # if a specific cleanup action required it can be registered with atexit
+#+end_src
+
+** Structuring an application
+
+- __init__.py file is a special type of file (which may be empty) and allows for nested import statements throughout the project
+
+A fairly typical project organisation may looklike the following:
+
+- tutorial-project/
+  - tutorial/
+    - __init__.py
+    - readport.py
+    - pcost.py
+    - stack.py
+    - ...
+  - tests/
+    - test_stack.py
+    - test_pcost.py
+    - ...
+  - examples/
+    - sample.py
+    - ...
+  - doc/
+    - tutorial.txt
+    - ...
+
+As long as the main set of source code files lives in a proper package (includes __init__.py file) the project structure should be fine.
+
+*** 3rd party packages
+
+Python has a large library of contributed packages that can be found at the [[https://pypi.org][Python Package Index]].
+
+* Chapter 02 - Operators, Expressions, and Data Manipulation
