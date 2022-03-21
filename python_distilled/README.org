@@ -181,3 +181,34 @@ print(f"Symmetric Difference: {e}" )
 #+end_src
 
 #+RESULTS:
+: {'GOOG', 'HPE', 'CAT', 'IBM'}
+: Union: {'MSFT', 'CAT', 'IBM', 'AA', 'HPE', 'GOOG'}
+: Intersection: {'IBM'}
+: Difference 1 from 2: {'AA', 'MSFT'}
+: Difference 2 from 1: {'HPE', 'CAT', 'GOOG'}
+: Symmetric Difference: {'MSFT', 'AA', 'GOOG', 'CAT', 'HPE'}
+
+- we can add single items to set using add()
+- we can add multiple items to set using update()
+- we can remove items using remove() - raises KeyError if absent
+- we can remove items usind discard() - will remove if exists, no keyerror if not
+
+** Functions
+
+- using a tuple to return multiple values to a function and unpack into different variables
+
+#+begin_src python :results output
+def divide(a: int, b: int) -> int:
+    q = a // b
+    r = a - q * b
+    return (q,r)
+
+quotient, remainder = divide(1456,33)
+print(f"Quotient: {quotient}\nRemainder: {remainder}")
+#+end_src
+
+#+RESULTS:
+: Quotient: 44
+: Remainder: 4
+
+** Exceptions
