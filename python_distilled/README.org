@@ -1,0 +1,128 @@
+#+TITLE: Python Distilled Notes
+#+PROPERTY: header-args:python :results output
+The following notes are snippets taken from Python Distilled by David Beazley. This book was read after completing Python Crash Course as an update to the language and to improve knowledge of python. Code snippets (and results where possible) can be found littered throughout to accompany th note explanations. Full python programs were created where examples required more information, comments found in the code, and links provided within the file.
+
+* Chapter 1 - Python Basics
+
+** Explicit types
+
+#+begin_src python
+x: int = 42 # explicit type as opposed to implicit
+#+end_src
+
+** f-strings
+
+- formatting specifiers can be added to an f-string to improve readability and look
+- the code below formats the substitutions with 3-digit decimal number right aligned and float to two decimal places
+- valid expressions can be added in the string formatting
+
+#+begin_src python :results output
+year = 1
+principal = 100.7808
+print(f'{year: >3d} {principal:0.2f}')
+main_year = 2020
+print(f'{main_year + year: >3d} {principal:0.2f}')
+#+end_src
+
+#+RESULTS:
+:   1 100.78
+: 2021 100.78
+
+** Flow control
+
+- empty clause in if statement can be declared using the keyword 'pass'
+
+#+begin_src python
+if a < b:
+    pass
+else:
+    print("a less than b")
+#+end_src
+
+- elif to handle multiple cases
+
+#+begin_src python
+if a == 'a':
+    # something
+elif a == 'b':
+    # do something else
+elif a == 'c':
+    # do something else again
+else:
+    # do something else entirely
+#+end_src
+
+*** Conditional expressions
+
+#+begin_src python
+maxVal = a if a > b else b
+#+end_src
+
+*** Assignment expression (walrus operator)
+
+- Sometimes we see the assignment of a variable and a conditional combined
+- parentheses around expression always required
+
+#+begin_src python :results output
+x = 0
+while (x := x +1) < 10:
+    print(x)
+#+end_src
+
+#+RESULTS:
+: 1
+: 2
+: 3
+: 4
+: 5
+: 6
+: 7
+: 8
+: 9
+
+
+** Text strings
+
+*** Common string methods
+
+#+begin_src python :results output
+a = 'Hello World'
+g = a.replace('Hello', 'Goodbye')
+print(a)
+print(g)
+print(a.endswith('ld'))
+print(a.endswith('orld',0,11)) # can specify start and end for slice to check
+print(a.find(' Wo')) # prints the first occurrence of substring
+print(a.lower()) # lowercase
+print(a.split('o'))
+#+end_src
+
+#+RESULTS:
+: Hello World
+: Goodbye World
+: True
+: True
+: 5
+: hello world
+: ['Hell', ' W', 'rld']
+
+*** String concatenation
+
+#+begin_src python :results output
+a = "Hello"
+b = " World"
+print(a+b)
+c = '9'
+d = '1'
+print(c+d)
+e = 'hello\nworld'
+print(str(e))
+print(repr(e)) # use repr() when debugging to get exact match of value and type
+#+end_src
+
+#+RESULTS:
+: Hello World
+: 91
+: hello
+: world
+: 'hello\nworld'
